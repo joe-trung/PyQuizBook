@@ -129,7 +129,7 @@ def concat_list_indexwise(lst1, lst2):
         for i in range(len(lst2)):
             lst1[i] += lst2[i]
         return lst1
-
+    # return [l1 + l2 for l1, l2 in zip(lst1, lst2)]
     """
     Write a program to add two lists index-wise. 
     Create a new list that contains the 0th index item from both the list, 
