@@ -7,14 +7,16 @@ def create_dict_from_lists(keys, values):
 
 def merge_two_dicts(d1, d2):
     return d1|d2
+
+    # return {**d1, **d2}
     """
     Merge two Python dictionaries into one
     """
 
 
 def init_dict_with_values(lst, d1):
-    final_dict = {key: d1 for key in lst}
-    return final_dict
+    return {key: d1 for key in lst}
+
 
     """
     Create a dict with default values for each key listed.
@@ -38,6 +40,7 @@ def delete_keys_from_dict(datadict, keylist):
     """
     Delete a list of keys from a dictionary
     """
+    # return {i: datadict[i] for i in datadict if i not in keylist}
 
 
 def check_dict_for_key(datadict, value):
@@ -55,6 +58,9 @@ def get_key_of_min_value(ddd):
         if ddd[key] == mini:
             keymin = key
     return keymin
+
+    # return min(ddd, key=ddd.get)
+
     """
     Get the key of the minimum value from a dictionary
     """
@@ -67,6 +73,8 @@ def get_key_of_max_value(ddd):
         if ddd[key] == maxi:
             keymax = key
     return keymax
+
+    # return max(ddd, key=ddd.get)
     """
     Get the key of the maximum value from a dictionary
     """
