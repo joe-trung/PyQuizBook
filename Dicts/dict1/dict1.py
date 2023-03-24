@@ -1,51 +1,72 @@
 def create_dict_from_lists(keys, values):
+    return dict(zip(keys, values))
     """
     This function returns a dict made from two lists.
     """
-    pass  # implement me
+
 
 def merge_two_dicts(d1, d2):
+    return d1|d2
     """
     Merge two Python dictionaries into one
     """
-    pass  # implement me
+
 
 def init_dict_with_values(lst, d1):
+    final_dict = {key: d1 for key in lst}
+    return final_dict
+
     """
     Create a dict with default values for each key listed.
-
-    """
-    #
-    pass  # implement me
-
-def extract_keys_to_dict(datadict, keylist):
-    """
-    Create a dictionary by extracting the keylist from a given dictionary
-    """
-    #
-    pass  # implement me
-
-def delete_keys_from_dict(datadict, keylist):
-    """
-    Delete a list of keys from a dictionary
     """
     pass
 
-def check_dict_for_key(datadict, key):
+
+def extract_keys_to_dict(datadict, keylist):
+    final_dict = {element: datadict[element] for element in keylist}
+    return final_dict
+    """
+    Create a dictionary by extracting the keylist from a given dictionary
+    """
+
+
+
+def delete_keys_from_dict(datadict, keylist):
+    for element in keylist:
+        datadict.pop(element)
+    return datadict
+    """
+    Delete a list of keys from a dictionary
+    """
+
+
+def check_dict_for_key(datadict, value):
+    return value in datadict.values()
     """
     Check if a value exists in a dictionary
     (NO FOR loops!)
     """
-    pass
+
 
 def get_key_of_min_value(ddd):
+    mini = min(ddd.values())
+    keymin = 0
+    for key in ddd:
+        if ddd[key] == mini:
+            keymin = key
+    return keymin
     """
     Get the key of the minimum value from a dictionary
     """
-    pass
+
 
 def get_key_of_max_value(ddd):
+    maxi = max(ddd.values())
+    keymax = 0
+    for key in ddd:
+        if ddd[key] == maxi:
+            keymax = key
+    return keymax
     """
     Get the key of the maximum value from a dictionary
     """
-    pass
